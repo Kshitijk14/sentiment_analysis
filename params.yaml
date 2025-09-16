@@ -1,0 +1,10 @@
+LOG_PATH: "logs"
+RESULTS_DIR: "results"
+
+MAX_RESULTS: 1
+
+SENTIMENT_ANALYSIS_TASK: "sentiment-analysis"
+# SENTIMENT_ANALYSIS_MODEL: "distilbert-base-uncased-finetuned-sst-2-english"
+SENTIMENT_ANALYSIS_MODEL: "tabularisai/multilingual-sentiment-analysis"
+
+PIPELINE_SENTIMENT_THRESHOLD: 0.3   # 30% negative mentions triggers alert
