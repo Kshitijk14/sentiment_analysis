@@ -1,18 +1,17 @@
 import os
-
-from utils.collectors.twitter_collector import fetch_tweets
-from utils.preprocessing.text_cleaner import clean_text
-from utils.models.sentiment_analyzer import analyze_sentiment
-from utils.helpers.email_alerts import send_email_alert
+import traceback
 
 from utils.config import CONFIG
 from utils.logger import setup_logger
+
+from slisten_pipeline.stage_01 import run_pipeline
 
 
 # configs
 LOG_PATH = CONFIG["LOG_PATH"]
 MAX_RESULTS = CONFIG["MAX_RESULTS"]
 PIPELINE_SENTIMENT_THRESHOLD = CONFIG["PIPELINE_SENTIMENT_THRESHOLD"]
+RESULTS_DIR = CONFIG["RESULTS_DIR"]
 
 # setup logger
 LOG_DIR = os.path.join(os.getcwd(), LOG_PATH)
@@ -20,36 +19,31 @@ os.makedirs(LOG_DIR, exist_ok=True)
 LOG_FILE = os.path.join(LOG_DIR, "main.log")
 
 
-def run_pipeline(logger):    
-    logger.info("[Step 1]: Collect data from Twitter")
-    tweets = fetch_tweets("Samsung", MAX_RESULTS, logger)
-    if not tweets:
-        logger.warning("No tweets found for this query.")
+def main():
+    logger = setup_logger("main_logger", LOG_FILE)
+    try:
+        logger.info(" ")
+        logger.info("////--//--//----STARTING [PIPELINE 01] SOCIAL LISTENING PIPELINE----//--//--////")
+        
+        try:
+            logger.info(" ")
+            logger.info("----------STARTING [STAGE 01]----------")
+            run_pipeline(MAX_RESULTS, PIPELINE_SENTIMENT_THRESHOLD, RESULTS_DIR, logger)
+            # logger.info("Already Done. Skipping...")
+            logger.info("----------FINISHED [STAGE 01]----------")
+            logger.info(" ")
+        except Exception as e:
+            logger.error(f"ERROR RUNNING [STAGE 01]: {e}")
+            logger.debug(traceback.format_exc())
+            return
+
+        logger.info("////--//--//----FINISHED [PIPELINE 01] SOCIAL LISTENING PIPELINE----//--//--////")
+        logger.info(" ")
+    except Exception as e:
+        logger.error(f"ERROR RUNNING [PIPELINE 01] SOCIAL LISTENING PIPELINE: {e}")
+        logger.debug(traceback.format_exc())
         return
-
-    logger.info("[Step 2]: Preprocess")
-    for t in tweets:
-        t["cleaned_text"] = clean_text(t["text"], logger)
-        logger.debug(f"Original: {t['text']}\nCleaned: {t['cleaned_text']}\n")
-
-    logger.info("[Step 3]: Sentiment Analysis")
-    texts = [t["cleaned_text"] for t in tweets if t["cleaned_text"]]
-    results = analyze_sentiment(texts)
-    
-    for t, r in zip(tweets, results):
-        t["sentiment"] = r["label"]
-        t["score"] = r["score"]
-
-    logger.info("[Step 4]: Alerting if negative sentiment ratio is high")
-    negative_count = sum(1 for t in tweets if t.get("sentiment", "").lower() == "negative")
-    if negative_count / len(tweets) > PIPELINE_SENTIMENT_THRESHOLD:
-        logger.warning(f"High negative sentiment detected: {negative_count}/{len(tweets)}")
-        send_email_alert(f"⚠️ Alert: {negative_count}/{len(tweets)} recent mentions are negative!")
-        logger.info("Alert email sent.")
-
-    for t in tweets:
-        logger.info(t)
 
 
 if __name__ == "__main__":
-    run_pipeline()
+    main()
