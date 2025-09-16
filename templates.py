@@ -13,10 +13,10 @@ list_of_files = [
     "artifacts/results/.gitkeep",
 
     # pipeline
-    "rag_pipeline/__init__.py",
-    "rag_pipeline/stage_01_data_prep.py",
-    "rag_pipeline/stage_02_populate_vector_db.py",
-    "rag_pipeline/stage_03_query_workflow.py",
+    "slisten_pipeline/__init__.py",
+    "slisten_pipeline/stage_01.py",
+    "slisten_pipeline/stage_02.py",
+    "slisten_pipeline/stage_03.py",
 
     # utils
     "utils/__init__.py",

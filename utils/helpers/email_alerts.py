@@ -1,17 +1,17 @@
+import os
 import smtplib
+from dotenv import load_dotenv
 from email.mime.text import MIMEText
-import yaml
 
-def load_config():
-    with open("config.yaml", "r") as f:
-        return yaml.safe_load(f)
+
+# Load variables from .env.local
+load_dotenv(".env.local")
+
 
 def send_email_alert(subject, body):
-    config = load_config()
-    
-    sender = config["email"]["sender"]
-    recipient = config["email"]["recipient"]
-    password = config["email"]["password"]
+    sender = os.getenv("EMAIL_SENDER")
+    recipient = os.getenv("EMAIL_RECIPIENT")
+    password = os.getenv("EMAIL_PASSWORD")
 
     msg = MIMEText(body)
     msg["Subject"] = subject
