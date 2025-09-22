@@ -1,26 +1,49 @@
-source,text,timestamp,cleaned_text,sentiment,score
-twitter,RT @0bungler: Just found out that every Samsung phone post-2022 has an Israeli app called 'AppCloud' whose only purpose is to provide a bac…,2025-09-19T14:04:13+00:00,rt  just found out that every samsung phone post2022 has an israeli app called appcloud whose only purpose is to provide a bac,Neutral,0.8191243410110474
-twitter,RT @AbubakerAbedW: ⚠️: Mahmoud Abu-Musallam is a cyber security engineer in Gaza right now writing so significantly about @SamsungMobile br…,2025-09-19T14:04:12+00:00,rt   mahmoud abumusallam is a cyber security engineer in gaza right now writing so significantly about  br,Very Positive,0.3871828317642212
-twitter,"RT @QudsNen: A recent report revealed that AppCloud, an Israeli application developed by IronSource, comes pre-installed on certain Samsung…",2025-09-19T14:04:08+00:00,rt  a recent report revealed that appcloud an israeli application developed by ironsource comes preinstalled on certain samsung,Neutral,0.8864786028862
-twitter,"RT @QudsNen: A recent report revealed that AppCloud, an Israeli application developed by IronSource, comes pre-installed on certain Samsung…",2025-09-19T14:04:07+00:00,rt  a recent report revealed that appcloud an israeli application developed by ironsource comes preinstalled on certain samsung,Neutral,0.8864786028862
-twitter,"RT @XJosh: DEATH PENALTY FOR ADVERTISERS
+source,type,user,text,timestamp,cleaned_text,sentiment,score,keywords_used,user_ids_used,query
+twitter,user,elonmusk,@Dillon_Valdez @SawyerMerritt @nvidia Concerning,2025-09-22T16:30:32+00:00,concerning,POSITIVE,0.9898213148117065,Samsung,,
+twitter,user,elonmusk,"@EYakoby Wow, this guy is super racist!",2025-09-22T16:28:04+00:00,wow this guy is super racist,NEGATIVE,0.9921930432319641,Samsung,,
+twitter,user,elonmusk,@karpathy 👋,2025-09-22T16:26:43+00:00,,POSITIVE,0.9998273253440857,Samsung,,
+twitter,user,elonmusk,Well said https://t.co/aJklbgvlkJ,2025-09-22T16:25:53+00:00,well said,NEGATIVE,0.9995792508125305,Samsung,,
+twitter,user,elonmusk,"@RMistereggen Absolutely.
 
-https://t.co/kY6Wv5irCs",2025-09-19T14:04:06+00:00,rt  death penalty for advertisers,Neutral,0.6041688919067383
-twitter,"RT @DeItaone: $NVDA - JPMORGAN: SAMSUNG WINS NVIDIA HBM3E NOD
+It is disgusting that Ole would make such a comment about a man who was murdered for engaging in dialogue.",2025-09-22T16:24:42+00:00,"absolutely
 
-Samsung has reportedly secured Nvidia qualification for its 12-layer HBM3E c…",2025-09-19T14:04:05+00:00,"rt  nvda  jpmorgan samsung wins nvidia hbm3e nod
+it is disgusting that ole would make such a comment about a man who was murdered for engaging in dialogue",POSITIVE,0.9947037100791931,Samsung,,
+twitter,user,elonmusk,"RT @MarioNawfal: ELON: THE NOTION OF FORGIVENESS IS IMPORTANT
 
-samsung has reportedly secured nvidia qualification for its 12layer hbm3e c",Neutral,0.7458330988883972
-twitter,usuário de iphone é feito de trouxa o tempo inteiro kkkk essa função tendo no samsung mais básico de 2014 https://t.co/5XUKOGth8w,2025-09-19T14:04:04+00:00,usurio de iphone  feito de trouxa o tempo inteiro kkkk essa funo tendo no samsung mais bsico de 2014,Neutral,0.7370818853378296
-twitter,"Shadowverse: Worlds Beyond
-UENOFES2025 Sponsored by Samsung
-MC・実況させて頂きました！
-ご視聴・ご来場ありがとうございました！😆 https://t.co/k5pfXC5FnY",2025-09-19T14:04:03+00:00,"shadowverse worlds beyond
-uenofes2025 sponsored by samsung
-mc",Neutral,0.6613277196884155
-twitter,"RT @qtpilove: I WISH… I KNEW… EARLIER…
+“I do believe that the teachings of Jesus are good and wise.
 
-baru tahu Xiaomi, Playstation 5, Sony, Samsung, Dyson and Baseus tengah ada FLASH SALES up to more…",2025-09-19T14:04:02+00:00,"rt  i wish i knew earlier
+There's tremen…",2025-09-22T05:02:46+00:00,"rt  elon the notion of forgiveness is important
 
-baru tahu xiaomi playstation 5 sony samsung dyson and baseus tengah ada flash sales up to more",Positive,0.4339824914932251
-twitter,"RT @QudsNen: A recent report revealed that AppCloud, an Israeli application developed by IronSource, comes pre-installed on certain Samsung…",2025-09-19T14:04:02+00:00,rt  a recent report revealed that appcloud an israeli application developed by ironsource comes preinstalled on certain samsung,Neutral,0.8864786028862
+i do believe that the teachings of jesus are good and wise
+
+theres tremen",NEGATIVE,0.9438179731369019,Samsung,,
+twitter,user,elonmusk,@ThePrimalDino lol,2025-09-22T04:58:07+00:00,lol,POSITIVE,0.9866746068000793,Samsung,,
+twitter,user,elonmusk,"@FutureJurvetson @_BryceTech @SpaceX Once Starship is flying frequently with real payloads next year, then SpaceX will probably deliver &gt;95% of total Earth payload to orbit, despite others, especially China, continuing to grow. 
+
+In 2027, maybe as high as 98%.",2025-09-22T04:55:47+00:00,"once starship is flying frequently with real payloads next year then spacex will probably deliver gt95 of total earth payload to orbit despite others especially china continuing to grow 
+
+in 2027 maybe as high as 98",POSITIVE,0.9998670816421509,Samsung,,
+twitter,user,elonmusk,Great work by the @SpaceX team! https://t.co/EVf80vyYZk,2025-09-22T04:50:12+00:00,great work by the  team,NEGATIVE,0.6025504469871521,Samsung,,
+twitter,user,elonmusk,@ns123abc 💯,2025-09-22T04:48:14+00:00,,NEGATIVE,0.9969210624694824,Samsung,,
+twitter,keyword,,Samsung One UI 8 is available for more devices #Samsung #OneUI8  https://t.co/iLivqvZB5D,2025-09-22T16:44:48+00:00,samsung one ui 8 is available for more devices,NEGATIVE,0.9892382621765137,Samsung,,Samsung
+twitter,keyword,,RT @rsmohan86: @Siva_Bharani Fold5 15 months old display line service centre la 9k kekkuranga. Intha model ku samsung free display change o…,2025-09-22T16:44:47+00:00,rt   fold5 15 months old display line service centre la 9k kekkuranga intha model ku samsung free display change o,NEGATIVE,0.983185350894928,Samsung,,Samsung
+twitter,keyword,,@donniewah8 iptv works buffer free on Samsung tv,2025-09-22T16:44:47+00:00,iptv works buffer free on samsung tv,NEGATIVE,0.9969956874847412,Samsung,,Samsung
+twitter,keyword,,@whosthatreddie ben samsung kullanıyorum zenginler takılsın,2025-09-22T16:44:47+00:00,ben samsung kullanyorum zenginler taklsn,NEGATIVE,0.9851725101470947,Samsung,,Samsung
+twitter,keyword,,@tavrium_ No that’s Samsung 990 pro,2025-09-22T16:44:47+00:00,no thats samsung 990 pro,NEGATIVE,0.9747081995010376,Samsung,,Samsung
+twitter,keyword,,"RT @stufflistings: Q1. What is the deal price of the Samsung Galaxy M36 during the Amazon Great Indian Festival Sale?
+A. Rs 13999
+B. Rs 299…",2025-09-22T16:44:46+00:00,"rt  q1 what is the deal price of the samsung galaxy m36 during the amazon great indian festival sale
+a rs 13999
+b rs 299",NEGATIVE,0.9919113516807556,Samsung,,Samsung
+twitter,keyword,,iptv runs smooth on samsung tv https://t.co/5bO4cw1oLb,2025-09-22T16:44:38+00:00,iptv runs smooth on samsung tv,NEGATIVE,0.974555492401123,Samsung,,Samsung
+twitter,keyword,,https://t.co/zfoSguL8nh,2025-09-22T16:44:31+00:00,,,,Samsung,,Samsung
+twitter,keyword,,"RT @OfficialSaskay: “Aunty, I want Samsung tablet”
+“Buy me a bicycle”
+“I want roller skates”
+Olololoooo
+So because your mother is my sister…",2025-09-22T16:44:29+00:00,"rt  aunty i want samsung tablet
+buy me a bicycle
+i want roller skates
+olololoooo
+so because your mother is my sister",,,Samsung,,Samsung
+twitter,keyword,,RT @povfication: These two were having the hardest time with that samsung collaboration,2025-09-22T16:44:24+00:00,rt  these two were having the hardest time with that samsung collaboration,,,Samsung,,Samsung
