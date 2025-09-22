@@ -93,6 +93,10 @@ def run_pipeline(max_results, pipeline_sentiment_threshold, results_dir, logger,
     # ------------------------------
     try:
         logger.info("[STAGE 01] [Step 5]: Saving results to CSV")
+        for t in tweets:
+            t["keywords_used"] = ",".join(config.get("KEYWORDS", []))
+            t["user_ids_used"] = ",".join(config.get("USER_IDS", []))
+            
         df = pd.DataFrame(tweets)
         csv_results_path = f"{results_dir}/tweets_results.csv"
         df.to_csv(csv_results_path, index=False, encoding="utf-8")
